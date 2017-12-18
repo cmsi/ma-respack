@@ -1,0 +1,7 @@
+src/chiqw/calc_chiqw /usr/bin
+src/calc_int/calc_w3d /usr/bin
+src/calc_int/calc_j3d /usr/bin
+src/wannier/calc_wannier /usr/bin
+util/xtapp2respack/wfn2respack /usr/bin
+util/xtapp2respack/xtapp2respack.sh /usr/bin
+sample /usr/share/respack
