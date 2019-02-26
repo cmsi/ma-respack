@@ -1,4 +1,3 @@
-openmp.patch
-install.patch
 manual.patch
+sample.patch
 debian.patch

@@ -1,8 +1,8 @@
-respack (1.1.2-1) unstable; urgency=low
+respack (20190226-1) unstable; urgency=low
 
-  * New upstream 1.1.2
+  * New upstream 20190226
 
- -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 26 Feb 2019 11:26:23 +0900
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 26 Feb 2019 17:06:06 +0900
 
 respack (20171018-1) unstable; urgency=low
 

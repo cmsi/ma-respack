@@ -8,7 +8,7 @@ RESPACK is a free software of ab initio many-body perturbation codes including c
 
 ### Version
 
-* 1.1.2-1 (26 Feb 2019)
+* 20190226-1 (26 Feb 2019)
 
 ### Provided packages
 
@@ -31,19 +31,24 @@ RESPACK is a free software of ab initio many-body perturbation codes including c
      suto apt-get install respack
      ```
 
+  3. How to run an example
+     ```
+     cp -rp /usr/share/respack/sample/xtapp/Al.fcc.6x6x6 .
+     cd Al.fcc.6x6x6
+     sh Al.sh
+     ```
+
 ### For developers
 
 * How to prepare original source tarball
 
   ```
-  VERSION=1.1.2
-  wget -O - http://www.mns.kyutech.ac.jp/cgi-bin/respack.cgi?f=RESPACK.tar.gz | tar zxvf -
-  wget -O manual.pdf http://www.mns.kyutech.ac.jp/cgi-bin/respack.cgi?f=manual.pdf
+  VERSION=yyyymmdd
+  wget -O RESPACK-$VERSION.tar.gz http://www.mns.kyutech.ac.jp/cgi-bin/respack.cgi?f=RESPACK-20190226.tar.gz
+  tar zxvf RESPACK-$VERSION.tar.gz
   mv -f RESPACK-$VERSION-dist respack_$VERSION
-  mv -f manual.pdf respack_$VERSION
-  rm -f respack_$VERSION/sample/xtapp/TiO2.ort.6x6x6/mk_localcoord-and-sc222/genvesta
   tar zcvf respack_$VERSION.orig.tar.gz respack_$VERSION
-  rm -rf respack_$VERSION
+  rm -rf RESPACK-$VERSION.tar.gz respack_$VERSION
   ```
 
 ### Links
