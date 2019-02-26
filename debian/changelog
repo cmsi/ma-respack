@@ -1,3 +1,9 @@
+respack (20190226-2) unstable; urgency=low
+
+  * Rename strconv to strconv.respack
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 26 Feb 2019 18:34:24 +0900
+
 respack (20190226-1) unstable; urgency=low
 
   * New upstream 20190226
