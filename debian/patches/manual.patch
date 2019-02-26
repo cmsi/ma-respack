@@ -1,0 +1,44 @@
+--- a/man/en/manual.tex
++++ b/man/en/manual.tex
+@@ -1,8 +1,8 @@
+-\documentclass{jarticle}
++\documentclass{article}
+ \usepackage{longtable}
+ \usepackage{indentfirst} 
+ \usepackage{amsmath,amssymb,bm}
+-\usepackage[dvipdfm]{graphicx,color}
++\usepackage{graphicx,color}
+ \newcommand{\tr}[1]{\textcolor{red}{#1}}
+ \newcommand{\tb}[1]{\textcolor{blue}{#1}}
+ \addtolength{\oddsidemargin}{-15mm}
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,6 +11,7 @@
+ message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})
+ 
+ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
++option(BUILD_DOC "Build documentation" ON)
+ option(ENABLE_MPI "Enable MPI Parallelization" ON)
+ enable_language(Fortran C)
+ 
+@@ -44,3 +45,6 @@
+ 
+ add_subdirectory(src)
+ add_subdirectory(util)
++if(BUILD_DOC)
++  add_subdirectory(man/en)
++endif()
+--- /dev/null
++++ b/man/en/CMakeLists.txt
+@@ -0,0 +1,11 @@
++if(${CMAKE_PROJECT_NAME} STREQUAL "Project")
++  message(FATAL_ERROR "cmake should be executed not for 'src' subdirectory, but for the top directory of RESPACK.")
++endif(${CMAKE_PROJECT_NAME} STREQUAL "Project")
++
++add_custom_target(manual ALL echo DEPENDS manual.pdf)
++add_custom_command(OUTPUT manual.pdf DEPENDS manual.tex
++  COMMAND env TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}//: latex ${CMAKE_CURRENT_SOURCE_DIR}/manual.tex
++  COMMAND env TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}//: latex ${CMAKE_CURRENT_SOURCE_DIR}/manual.tex
++  COMMAND env TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}//: dvipdfm manual.dvi
++)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manual.pdf DESTINATION share/respack)
