@@ -1,2 +1,4 @@
+openmp.patch
 install.patch
 manual.patch
+debian.patch

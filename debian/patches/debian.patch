@@ -1,0 +1,16 @@
+--- a/src/chiqw/CMakeLists.txt
++++ b/src/chiqw/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.10)
++cmake_minimum_required(VERSION 2.8)
+ if(${CMAKE_PROJECT_NAME} STREQUAL "Project")
+   message(FATAL_ERROR "cmake should be executed not for 'src' subdirectory, but for the top directory of RESPACK.")
+ endif(${CMAKE_PROJECT_NAME} STREQUAL "Project")
+--- a/src/gw/CMakeLists.txt
++++ b/src/gw/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.10)
++cmake_minimum_required(VERSION 2.8)
+ if(${CMAKE_PROJECT_NAME} STREQUAL "Project")
+   message(FATAL_ERROR "cmake should be executed not for 'src' subdirectory, but for the top directory of RESPACK.")
+ endif(${CMAKE_PROJECT_NAME} STREQUAL "Project")
