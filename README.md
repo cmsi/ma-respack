@@ -8,7 +8,7 @@ RESPACK is a free software of ab initio many-body perturbation codes including c
 
 ### Version
 
-* 20190226-3 (26 Feb 2019)
+* 20200113-1
 
 ### Provided packages
 
@@ -16,9 +16,11 @@ RESPACK is a free software of ab initio many-body perturbation codes including c
 
 ### Target distributions and architectures
 
+* Debian buster (amd64, i386)
 * Debian stretch (amd64, i386)
 * Debian jessie (amd64, i386)
-* Debian wheezy (amd64, i386)
+* Ubuntu xenial (amd64)
+* Ubuntu bionic (amd64)
 
 ### For users
 
@@ -44,9 +46,9 @@ RESPACK is a free software of ab initio many-body perturbation codes including c
 
   ```
   VERSION=yyyymmdd
-  wget -O RESPACK-$VERSION.tar.gz http://www.mns.kyutech.ac.jp/cgi-bin/respack.cgi?f=RESPACK-20190226.tar.gz
+  wget -O RESPACK-$VERSION.tar.gz http://www.mns.kyutech.ac.jp/cgi-bin/respack.cgi?f=RESPACK-$VERSION.tar.gz
   tar zxvf RESPACK-$VERSION.tar.gz
-  mv -f RESPACK-$VERSION-dist respack_$VERSION
+  mv -f RESPACK-$VERSION respack_$VERSION
   tar zcvf respack_$VERSION.orig.tar.gz respack_$VERSION
   rm -rf RESPACK-$VERSION.tar.gz respack_$VERSION
   ```

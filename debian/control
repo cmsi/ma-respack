@@ -3,7 +3,6 @@ Section: scientific
 Priority: extra
 Maintainer: Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>
 Build-Depends: debhelper (>= 9.0.0), libblas-dev
-Build-Depends-Indep: texlive-latex-base
 Standards-Version: 3.9.3
 Homepage: https://sites.google.com/view/kazuma7k6r
 
